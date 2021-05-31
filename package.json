@@ -1,25 +1,18 @@
 {
-  "name": "market_backend",
+  "name": "service-per-action-architecture",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Install MySQL\r 2. Login to MySQL\r 3. Create database\r ``` \r mysql> CREATE DATABASE spaa; \r ```\r 4. Create new user:\r ``` \r mysql> CREATE USER 'spaa_user'@'%' IDENTIFIED BY 'spaa_user_password'; \r ```\r 5. Grant all privileges to new user:\r ``` \r mysql> GRANT ALL PRIVILEGES ON `spaa`.* to 'spaa_user'@'%'; \r ```\r ### 2. Start Node.js server\r 1. Install Node.js\r 2. Go to main project folder\r 3. ``` npm intsall ```\r 4. ``` npm run start ```",
   "main": "server.js",
   "directories": {
     "lib": "lib"
   },
-  "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon ."
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "cls-hooked": "^4.2.2",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
-    "dotenv": "^9.0.2",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
     "jsonwebtoken": "^8.5.1",
     "livr": "^2.3.3",
     "mysql2": "^2.2.5",
@@ -27,6 +20,22 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
     "swagger-ui-express": "^4.1.6"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon .",
+    "demo": "sleep 1m && export NODE_ENV=demo && node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KolesnykMA/Service-per-action-architecture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KolesnykMA/Service-per-action-architecture/issues"
+  },
+  "homepage": "https://github.com/KolesnykMA/Service-per-action-architecture#readme"
 }

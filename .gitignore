@@ -1,4 +1,5 @@
 node_modules
 .idea
-.db_data
+.dbData
 .vscode
+lib/domain/db/migrations/*

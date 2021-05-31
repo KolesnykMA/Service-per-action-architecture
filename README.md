@@ -6,19 +6,23 @@
 2. Login to MySQL
 3. Create database
 ``` 
-mysql> CREATE DATABASE db_name; 
+mysql> CREATE DATABASE spaa; 
 ```
 4. Create new user:
 ``` 
-mysql> CREATE USER 'db_user'@'%' IDENTIFIED BY 'db_user_password'; 
+mysql> CREATE USER 'spaa_user'@'%' IDENTIFIED BY 'spaa_user_password'; 
 ```
 5. Grant all privileges to new user:
 ``` 
-mysql> GRANT ALL PRIVILEGES ON `db_name`.* to 'db_user'@'%'; 
+mysql> GRANT ALL PRIVILEGES ON `spaa`.* to 'spaa_user'@'%'; 
 ```
 ### 2. Start Node.js server
 1. Install Node.js
-2. Go to main project folder
+2. Cd to main project folder
 3. ``` npm intsall ```
-4. ``` npm run start ```
+4. ``` npx sequelize-cli db:migrate ```
+5. ``` npm run start ```
+
+Swagger:
+http://localhost:5000/api-docs/
 

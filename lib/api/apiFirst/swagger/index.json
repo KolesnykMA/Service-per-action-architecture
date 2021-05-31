@@ -6,9 +6,9 @@
     "title" : "Dada API mobile"
   },
   "servers" : [ {
-    "url" : "http://localhost:5000/api/v1/web"
+    "url" : "http://localhost:5000/api/v1/first"
   }, {
-    "url" : "http://3.11.111.111/api/v1/web"
+    "url" : "http://3.11.111.111/api/v1/first"
   }],
   "tags" : [ {
     "name" : "auth"
