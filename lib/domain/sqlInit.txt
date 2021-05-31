@@ -1,0 +1,7 @@
+Commands required to create database in MySQL server
+
+--------------------- MySQL ---------------------
+
+CREATE DATABASE myNewDatabase;
+CREATE USER 'db_user'@'%' IDENTIFIED BY 'db_user_password';
+GRANT ALL PRIVILEGES ON myNewDatabase.* to 'db_user'@'%';

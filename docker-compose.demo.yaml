@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/demo:/etc/nginx/conf.d
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - .db_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: dada
+      MYSQL_USER: dada_user
+      MYSQL_PASSWORD: dada_user_password
+      MYSQL_ROOT_PASSWORD: root
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.demo
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+    environment:
+      DOCKER_DB_HOST: mysql
