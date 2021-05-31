@@ -1,14 +1,14 @@
 require('dotenv').config();
 
 const mobileApi = require('./lib/api/app');
-// const domain = require('./lib/domain');
+const domain = require('./lib/domain');
 
 const appConfig = require('./lib/config/appConfig');
-// const dbConfig = require('./lib/config/dbConfig');
+const dbConfig = require('./lib/config/dbConfig');
 
 async function server() {
   mobileApi.start({appPort: appConfig.port});
-  // await domain.initializeDomain(dbConfig);
+  await domain.initializeModels(dbConfig);
 }
 
 server().catch((error) => {
