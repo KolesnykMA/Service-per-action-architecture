@@ -3,7 +3,7 @@
   "info" : {
     "description" : "Api for API mobile",
     "version" : "1.0.0",
-    "title" : "Dada API mobile"
+    "title" : "SPPA API"
   },
   "servers" : [ {
     "url" : "http://localhost:5000/api/v1/first"

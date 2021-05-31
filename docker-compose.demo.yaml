@@ -17,9 +17,9 @@ services:
     volumes:
       - .dbData:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: dada
-      MYSQL_USER: dada_user
-      MYSQL_PASSWORD: dada_user_password
+      MYSQL_DATABASE: spaa
+      MYSQL_USER: spaa_user
+      MYSQL_PASSWORD: spaa_user_password
       MYSQL_ROOT_PASSWORD: root
   api:
     build:
