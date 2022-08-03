@@ -1,4 +1,5 @@
 # Node.js Service-per-Action Architecture 👾
+This project is example of using Vikor Turskiy (https://github.com/koorchik) approach for building Node.js backend services
 
 ## Setup:
 ### 1. Configure MySQL database
